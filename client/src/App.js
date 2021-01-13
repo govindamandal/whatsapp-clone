@@ -3,10 +3,14 @@ import ProfileSection from './components/ProfileSection/ProfileSection';
 import SearchPeople from './components/SearchPeople/SearchPeople';
 import ChatCardList from './components/ChatCardList/ChatCardList';
 import ChatSection from './components/ChatSection/ChatSection';
+import Login from './components/Login/Login';
 
 function App() {
   return (
-    <div className="App">
+    <>
+    {true ?
+      <Login /> : 
+      <div className="App">
       <div className="left-side">
         <ProfileSection />
         <SearchPeople />
@@ -16,6 +20,8 @@ function App() {
         <ChatSection />
       </div>
     </div>
+    }
+    </>
   );
 }
 
