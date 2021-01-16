@@ -18,6 +18,10 @@ app.use([
     Routes
 ]);
 
+const io = ( module.exports.io = require('socket.io')(server) );
+
+
+
 server.listen(port, () => {
     console.log(`Server is runnig at port ${port}`);
 });
