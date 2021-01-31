@@ -31,6 +31,8 @@ module.exports = (socket) => {
                         console.log('New user joined');
                         socket.sessionId = sessionId;
                         socket.join(sessionId)
+                        socket.broadcast.emit('new-online-user');
+                        callback();
                     }
                 }
             );

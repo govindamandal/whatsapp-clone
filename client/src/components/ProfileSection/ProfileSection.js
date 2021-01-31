@@ -1,13 +1,16 @@
 import './ProfileSection.scss';
-
-const ProfileSection = () => {
+import { useContext } from 'react';
+import AuthContext from './../../context/AuthContext';
+const ProfileSection = ({handleLogout}) => {
+    const userObject = useContext(AuthContext);
+    const { profileImg, name } = userObject;
     return (
         <div className="profile-section">
             <div className="img-container">
-                <img src="https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg" alt="PROFILE"/>
+                <img src={profileImg} alt="PROFILE"/>
             </div>
-            Akshay
-            <div className="action-items">
+            {name}
+            <div className="action-items" onClick={handleLogout}>
                 Logout
             </div>
         </div>

@@ -6,7 +6,7 @@ exports.getUniqueId = () => {
     return uuidv4();
 }
 
-exports.getTime() = () => {
+exports.getTime = () => {
     return Date.now();
 }
 

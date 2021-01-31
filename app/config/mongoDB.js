@@ -2,6 +2,7 @@ const MONGO_DB = require('mongodb');
 const MongoClient = MONGO_DB.MongoClient;
 const url = process.env.MONGO_URL;
 try {
+    console.log(url);
     const M_CONNECT = MongoClient.connect(url, {
         useUnifiedTopology: true
     });
@@ -9,5 +10,5 @@ try {
         MONGO_DB, M_CONNECT
     };
 } catch (ex) {
-    
+    console.log(ex);
 }
